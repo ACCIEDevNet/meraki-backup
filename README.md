@@ -29,5 +29,5 @@ A Dockerized web application for backing up Cisco Meraki network configurations.
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/meraki-backup.git
+   git clone https://github.com/ACCIEDevNet/meraki-backup.git
    cd meraki-backup
