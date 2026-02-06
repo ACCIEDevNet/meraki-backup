@@ -5,18 +5,29 @@ Docker Pulls Docker Image Size Docker Version
 
 📋 Features
 🔐 No Authentication Required - Direct access to backup interface
+
 🌐 Simple Web Interface - Clean, user-friendly dashboard
+
 🔍 Network Discovery - Automatically finds all networks in your organization
-📊 Comprehensive Backup - Backs up:
-MX, MS, MR device configurations
+
+📊 Comprehensive Backup - Backs up: MX, MS, MR device configurations
+
 Network settings and static routes
+
 DHCP server policies
+
 Layer 3 interfaces
+
 📁 Organized Storage - Backups saved by organization/network
+
 📥 Downloadable Backups - ZIP files for easy download
+
 🐳 Quick Start with Docker
+
 Prerequisites
+
 Docker installed
+
 Meraki API Key (from Meraki Dashboard)
 Meraki Organization ID
 Step 1: Pull the Docker Image
@@ -44,21 +55,8 @@ Organization ID is in the URL or under organization details
 🎯 One-Line Installation
 docker run -d -p 8080:5000 sengar1/meraki-backup-meraki-backup:v1.0
 📸 Interface Preview
-┌─────────────────────────────────────────┐
-│         MERAKI BACKUP SOLUTION          │
-├─────────────────────────────────────────┤
-│                                         │
-│  Meraki API Key: [___________________]  │
-│                                         │
-│  Organization ID: [__________________]  │
-│                                         │
-│          [ Discover Networks ]          │
-│                                         │
-│  Select Network: [▼ Dropdown List   ]   │
-│                                         │
-│          [ Start Backup ]               │
-│                                         │
-└─────────────────────────────────────────┘
+<img width="865" height="511" alt="image" src="https://github.com/user-attachments/assets/299339e9-af87-42c9-91f9-7e5971c32e32" />
+
 ⚙️ Configuration Options
 Port Configuration
 Default port is 8080. To use a different port:
@@ -67,10 +65,8 @@ docker run -d -p 3000:5000 sengar1/meraki-backup-meraki-backup:v1.0
 Persist Backups
 To save backups on your host machine:
 
-docker run -d \
-  -p 8080:5000 \
-  -v $(pwd)/meraki-backups:/app/backups \
-  sengar1/meraki-backup-meraki-backup:v1.0
+docker run -d \ -p 8080:5000 \  -v $(pwd)/meraki-backups:/app/backups \ sengar1/meraki-backup-meraki-backup:v1.0
+
 🚀 Using Docker Compose (Recommended)
 # Create docker-compose.yml
 cat > docker-compose.yml << 'EOF'
@@ -102,21 +98,10 @@ Step 4: Start Backup
 Click "Start Backup"
 Watch the progress bar as configurations are backed up
 Download the ZIP file when complete
-📊 Backup Contents
-Each backup includes:
+📊 Backup Contents Each backup includes:
 
-📁 [Network Name]_[Timestamp].zip
-├── network_settings.json     # Network configuration
-├── devices/                  # Device configurations
-│   ├── mx_devices.json      # MX appliances
-│   ├── ms_devices.json      # MS switches
-│   └── mr_devices.json      # MR access points
-├── static_routes.json       # Routing tables
-├── dhcp_settings.json       # DHCP configuration
-├── l3_interfaces.json       # Layer 3 interfaces
-├── vlans.json               # VLAN configurations
-├── firewall_rules.json      # Security rules
-└── ssids.json               # Wireless SSIDs
+<img width="479" height="259" alt="image" src="https://github.com/user-attachments/assets/3795a728-9eb7-4cab-b998-090941fda2c9" />
+
 🛠️ Management Commands
 View Running Container
 docker ps
