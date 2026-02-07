@@ -1,7 +1,12 @@
 🚀 Meraki Backup Solution (No Authentication)
 A simple, Dockerized web application to backup your Cisco Meraki network configurations. Just enter your API key and Organization ID to get started!
 
-Docker Pulls Docker Image Size Docker Version
+![Docker Pulls](https://img.shields.io/docker/pulls/sengar1/meraki-backup-meraki-backup)
+
+![Docker Image Size](https://img.shields.io/docker/image-size/sengar1/meraki-backup-meraki-backup)
+
+![Docker Image Version](https://img.shields.io/docker/v/sengar1/meraki-backup-meraki-backup?label=version)
+
 
 📋 Features
 🔐 No Authentication Required - Direct access to backup interface
